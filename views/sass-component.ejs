@@ -4,33 +4,139 @@
 
   <body>
     <%- include('./partials/nav.ejs') %>
+    <nav class="navbar-primary text-white mb-4">
+      <div class="container">
+        <h2 class="site-title">Rifqi's Blog</h2>
+        <p>SIMPLE BLOG SITE</p>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="responsive-test">Responsive TEST</div>
+      <!-- colors -->
+      <h2>Colors</h2>
+      <span class="text-primary text-hover-info">primary text</span> |
+      <span class="text-secondary">secondary text</span> |
+      <span class="text-error">error text</span> |
+      <span class="text-info">info text</span> |
+      <span class="text-gray">gray text</span>
 
-    <!-- Colors -->
-    <span class="text-primary">Primary Text</span>
-    <span class="text-secondary">Secondary Text</span>
-    <span class="text-gray">Gray Text</span>
-    <span class="text-black">Black Text</span>
-    <span class="text-info">Info Text</span>
-    <span class="text-disabled">Disabled Text</span>
-    <span class="text-error">Error Text</span>
-    <!-- Font Sizes -->
+      <hr class="mt-2 mb-2" />
 
-    <!-- Buttons -->
+      <span class="bg-primary text-white">bg primary</span> |
+      <span class="bg-secondary text-white">bg secondary</span> |
+      <span class="bg-error text-white">bg error</span> |
+      <span class="bg-info text-white">bg info</span> |
+      <span class="bg-gray text-white">bg gray</span> |
 
-    <!-- Cards -->
-    <h2>Cards</h2>
-    <div class="card">
-      <h1 class="card-title">Card Title</h1>
-      <p class="card-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        dignissimos officiis libero, porro nisi officia eveniet molestias
-        corrupti, praesentium doloremque minima facere quia magni consequuntur
-        repellat ipsam sit veniam blanditiis. <a href="#">READ MORE</a>
-      </p>
+      <hr class="mt-2 mb-2" />
+
+      <span class="bg-primary-dark-8 text-white">primary dark 8</span> |
+      <span class="bg-primary-dark-6 text-white">primary dark 6</span> |
+      <span class="bg-primary-dark-4 text-white">primary dark 4</span> |
+      <span class="bg-primary-dark-2 text-white">primary dark 2</span> |
+      <span class="bg-primary text-white">primary</span> |
+      <span class="bg-primary-light-2 text-white">primary light 2</span> |
+      <span class="bg-primary-light-4 text-white">primary light 4</span> |
+      <span class="bg-primary-light-6 text-white">primary light 6</span> |
+      <span class="bg-primary-light-8 text-white">primary light 8</span> |
+
+      <a href="#" class="text-primary text-hover-secondary-light-1"
+        >gray text hover me</a
+      >
+
+      <hr class="mt-2 mb-2" />
+      <!-- font sizes -->
+      <h2 class="mb-2">Font Sizes</h2>
+      <div class="font-sm">this is small font</div>
+      <div class="font-md">this is medium font</div>
+      <div class="font-lg">this is large font</div>
+      <div class="font-xl">this is extra large font</div>
+      <div class="font-xxl">this is extra, extra large font</div>
+
+      <hr class="mt-2 mb-2" />
+
+      <!-- buttons -->
+      <h2>Buttons</h2>
+      <a href="#" class="btn">default btn</a>
+      <a href="#" class="btn-primary text-white">click me</a>
+      <a href="#" class="btn-secondary text-white">click me</a>
+      <a href="#" class="btn-error text-white">click me</a>
+      <a href="#" class="btn-info">click me</a>
+      <a href="#" class="btn-outlined-primary text-black text-hover-white"
+        >click me</a
+      >
+      <a href="#" class="btn-outlined-secondary text-black text-hover-white"
+        >click me</a
+      >
+      <a href="#" class="btn-complement-secondary">complement</a>
+      <a href="#" class="btn-complement-primary">complement</a>
+
+      <hr class="mt-2 mb-2" />
+
+      <!-- cards -->
+      <h2>Cards</h2>
+      <div class="card">
+        <h1 class="card-title">This is a title</h1>
+        <p class="card-body">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo
+          totam aliquam praesentium ducimus tempore sapiente quia nulla optio?
+          Lorem ipsum, dolor sit amet consectetur
+          <a href="">adipisicing elit</a>. Libero laboriosam laborum
+          exercitationem autem commodi voluptas odio aliquid ut velit doloremque
+          minima, quaerat dolores, corporis consequuntur totam nam id veniam
+          maxime.
+        </p>
+      </div>
+
+      <!-- grid system -->
+      <h2 class="mb-2">GRID SYSTEM</h2>
+      <div class="row gap-2 justify-center">
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">CARD TITLE</h3>
+            <p class="card-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
+              culpa, excepturi quos, ea accusamus laudantium dolores similique
+              nisi, repellat aliquam eos cum quas possimus voluptatem vel fuga
+              pariatur maxime incidunt.
+            </p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">CARD TITLE</h3>
+            <p class="card-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
+              culpa, excepturi quos, ea accusamus laudantium dolores similique
+              nisi, repellat aliquam eos cum quas possimus voluptatem vel fuga
+              pariatur maxime incidunt.
+            </p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">CARD TITLE</h3>
+            <p class="card-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
+              culpa, excepturi quos, ea accusamus laudantium dolores similique
+              nisi, repellat aliquam eos cum quas possimus voluptatem vel fuga
+              pariatur maxime incidunt.
+            </p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">CARD TITLE</h3>
+            <p class="card-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
+              culpa, excepturi quos, ea accusamus laudantium dolores similique
+              nisi, repellat aliquam eos cum quas possimus voluptatem vel fuga
+              pariatur maxime incidunt.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Grid System -->
-
-    <!-- Utilities -->
     <%- include('./partials/footer.ejs') %>
   </body>
 </html>
