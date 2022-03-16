@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const blogsRoutes = require("./routes/blogRoutes");
+const sassMiddleware = require('node-sass-middleware')
 
 // Express App
 const app = express();
@@ -16,6 +17,13 @@ mongoose
 // register view engine
 app.set("view engine", "ejs");
 
+app.use(
+  sassMiddleware({
+    src: __dirname + '/sass',
+    dest: __dirname + '/public',
+  })
+);
+
 // middleware & static files
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +31,10 @@ app.use(express.urlencoded({ extended: true }));
 // routes
 app.get("/", (req, res) => {
   res.redirect("/blogs");
+});
+
+app.get("/sass", (req, res) => {
+  res.render("sass-component", { title: "Learn SASS" });
 });
 
 app.get("/about", (req, res) => {
