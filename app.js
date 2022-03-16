@@ -1,4 +1,5 @@
 const express = require("express");
+const morgan = require("morgan");
 
 // Express App
 const app = express();
@@ -12,14 +13,9 @@ const dirname = { root: __dirname };
 // Listen for Request
 app.listen(3000);
 
-app.use((req, res, next) => {
-  console.log("new request made :");
-  console.log("host :", req.hostname);
-  console.log("path :", req.path);
-  console.log("method :", req.method);
-  next();
-});
-
+// middleware & static files
+app.use(express.static("public"));
+app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
   const blogs = [
