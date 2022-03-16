@@ -21,6 +21,7 @@ app.use(
   sassMiddleware({
     src: __dirname + '/sass',
     dest: __dirname + '/public',
+    debug: true,
   })
 );
 
