@@ -1,3 +1,19 @@
-.form-control {
-    
+@mixin input($bg-color: #e2e2e2) {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0.5px solid $disabled;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form-input {
+  @include input;
+  &:focus {
+      outline: none;
+      border: 1px solid $info;
+      box-shadow: $base-box-shadow;
+  }
 }

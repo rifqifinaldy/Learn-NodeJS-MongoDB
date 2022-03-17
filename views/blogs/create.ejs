@@ -5,20 +5,22 @@
     <%- include('../partials/nav.ejs') %>
     <div class="container">
         <%- include('../partials/pageTitle', {title: "Create New Blog"}) %>
-      <form action="/blogs" method="POST">
-        <div class="row">
+      <form class="justify-center" action="/blogs" method="POST">
+        <div class="row gap-2">
           <div class="col-6-md">
             <label for="title">Blog Title : </label>
-            <input type="text" id="title" name="title" required />
+            <input class="form-input" type="text" id="title" name="title" required />
           </div>
           <div class="col-6-md">
             <label for="snippet">Blog Snippet : </label>
-            <input type="text" id="snippet" name="snippet" required />
+            <input class="form-input" type="text" id="snippet" name="snippet" required />
+          </div>
+          <div class="col-12-md">
+            <label for="body">Description : </label>
+            <textarea class="form-input" id="body" name="body" rows="10" required></textarea>
           </div>
         </div>
-        <label for="body">Blog Body : </label>
-        <textarea id="body" name="body" required></textarea>
-        <button>Submit</button>
+        <button class="btn-primary text-white w-25">Submit</button>
       </form>
     </div>
     <%- include('../partials/footer.ejs') %>

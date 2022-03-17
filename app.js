@@ -37,10 +37,6 @@ app.get("/sass", (req, res) => {
   res.render("sass-component", { title: "Learn SASS" });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about", { title: "About" });
-});
-
 // blog routes
 app.use("/blogs", blogsRoutes);
 

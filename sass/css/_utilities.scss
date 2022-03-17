@@ -157,6 +157,15 @@ $utilities: (
       "xxl": $font-size-xxl,
     ),
   ),
+  "width": (
+    "prefix": "w",
+    "values": (
+      "100": 100%,
+      "75": 75%,
+      "50": 50%,
+      "25": 25%,
+    ),
+  ),
 );
 
 // generate utility classes
