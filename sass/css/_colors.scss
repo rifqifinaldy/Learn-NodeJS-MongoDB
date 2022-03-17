@@ -30,6 +30,7 @@
     @for $i from 1 through 9 {
       .text-#{$key}-dark-#{$i} {
         color: mix(black, $val, $i * 10);
+        transition: all 0.5s ease-in;
       }
       .text-hover-#{$key}-dark-#{$i} {
         &:hover {

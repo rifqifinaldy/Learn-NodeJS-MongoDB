@@ -8,13 +8,16 @@
   border-radius: $base-border-radius / 4;
 
   .card-title {
-    font-size: $font-size-lg;
-    padding-bottom: $base-padding;
+    font-size: $base-font-size;
     font-weight: bold;
   }
 
+  hr {
+    margin-bottom: $base-margin;
+  }
+
   .card-body {
-    font-size: $base-font-size;
+    font-size: $font-size-sm;
 
     a {
       text-decoration: underline;

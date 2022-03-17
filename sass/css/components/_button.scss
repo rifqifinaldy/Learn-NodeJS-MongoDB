@@ -3,9 +3,10 @@
   cursor: pointer;
   display: inline-block;
   border: 0;
-  padding: $base-padding $base-padding * 2;
+  padding: $base-padding;
   border-radius: $base-border-radius;
   background-color: $bg-color;
+  box-shadow: $base-box-shadow;
   transition: all 0.2s ease-in-out;
 }
 

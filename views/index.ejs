@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>  
-<body>
+  <%- include('./partials/head.ejs') %>
+  <body>
     <%- include('./partials/nav.ejs') %>
-
-    <div class="blogs content">
-      <h2>All Blogs</h2>
-      <% if(blogs.length > 0) { %> <% blogs.forEach(blog => { %>
-      <a class="single" href="/blogs/<%= blog._id%>">
-        <h3 class="title"><%= blog.title %></h3>
-      <p class="snippet"><%= blog.snippet %></p>
-    </a>
-      <% }) %> <% } else { %>
-      <p>There's no Blogs to Display</p>
-      <% } %>
+    <div class="container">
+      <div class="row gap-2">
+        <div class="col-9-md">
+          <%- include('./partials/pageTitle.ejs', {title: "Home"}); %>
+          <p>
+            <i>Salute</i> im Rifqi Finaldy, Frontend Developer. There's no project involved in this app as it's only for studying purpose.
+            This website running on top of <b>Node JS</b>, EJS as the <i>Templating Engine</i>, SCSS for styling, and <b>MongoDB</b> for the Database.
+            <br>
+            Feel free to download/clone this project via this <a class="text-error text-hover-secondary-light-1" href="https://github.com/rifqifinaldy/Learn-NodeJs-MongoDb">link</a>
+          </p>
+          <a href="blogs/create" class="btn-primary text-white mt-2"><i class="fa-solid fa-plus"></i> Create New Blog</a>
+        </div>
+        <div class="col-3-md">
+          <% if(blogs.length > 0) { %> <% blogs.forEach(blog => { %>
+          <div class="col-12-xs mb-1">
+            <a class="single" href="/blogs/<%= blog._id%>">
+              <%- include('./partials/card.ejs', {title: blog.title, body:
+              blog.snippet}); %>
+            </a>
+          </div>
+          <% }) %>
+        </div>
+        <% } else { %>
+        <p>There's no Blogs to Display</p>
+        <% } %>
+      </div>
     </div>
     <%- include('./partials/footer.ejs') %>
   </body>
