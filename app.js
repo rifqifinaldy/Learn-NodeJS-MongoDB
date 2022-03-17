@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const blogsRoutes = require("./routes/blogRoutes");
-const sassMiddleware = require('node-sass-middleware')
+const sassMiddleware = require('node-sass-middleware');
 
 // Express App
 const app = express();
@@ -21,6 +21,7 @@ app.use(
   sassMiddleware({
     src: __dirname + '/sass',
     dest: __dirname + '/public',
+    outputStyle: 'compressed',
   })
 );
 
@@ -31,10 +32,6 @@ app.use(express.urlencoded({ extended: true }));
 // routes
 app.get("/", (req, res) => {
   res.redirect("/blogs");
-});
-
-app.get("/sass", (req, res) => {
-  res.render("sass-component", { title: "Learn SASS" });
 });
 
 // blog routes
